@@ -1,10 +1,24 @@
 # usps-v3-php
 
 [![Tests](https://github.com/revereveal/usps-v3-php/actions/workflows/tests.yml/badge.svg)](https://github.com/revereveal/usps-v3-php/actions/workflows/tests.yml)
+[![Packagist](https://img.shields.io/packagist/v/revaddress/usps-v3-php)](https://packagist.org/packages/revaddress/usps-v3-php)
+[![RevAddress](https://img.shields.io/badge/Managed%20API-RevAddress-6366f1)](https://revaddress.com)
 
 PHP client for the USPS v3 REST API. Drop-in replacement for the retired Web Tools XML API.
 
 **Zero dependencies.** PHP 8.0+ with `ext-json` and `ext-openssl`. Works in WooCommerce, Magento, Laravel, Symfony, or standalone. **59 tests, 102 assertions.**
+
+> **Don't want to manage USPS credentials?** [RevAddress](https://revaddress.com) provides a managed USPS v3 API with flat monthly pricing, rate limit handling, and BYOK support. [Get a free sandbox key](https://revaddress.com/signup/) — no credit card required.
+
+## Migrating from EasyPost or USPS Web Tools?
+
+RevAddress provides a managed USPS v3 API with flat monthly pricing — no per-label fees. If you're migrating from EasyPost (shutting down March 17, 2026) or the legacy USPS Web Tools XML API:
+
+- **[Migration Guide](https://revaddress.com/blog/usps-migration-guide/)** — Step-by-step from XML to REST
+- **[EasyPost vs RevAddress](https://revaddress.com/blog/easypost-vs-revaddress/)** — Feature and pricing comparison
+- **[Endpoint Mapping](https://revaddress.com/blog/usps-web-tools-endpoint-mapping/)** — Every legacy endpoint mapped to v3
+
+Save 81% vs EasyPost at 5,000 labels/mo ($79/mo flat vs $420 in per-label fees). [Get started →](https://revaddress.com/signup/)
 
 ## Install
 
@@ -185,6 +199,18 @@ vendor/bin/phpunit --testdox
 
 59 tests covering: Client validation, TokenManager cache lifecycle, Http multipart parsing, exception hierarchy and retryability. CI runs PHP 8.0–8.4.
 
+## RevAddress Managed API
+
+If you'd rather not manage USPS OAuth credentials, rate limits, and enrollment yourself, **[RevAddress](https://revaddress.com)** offers a managed REST API:
+
+- **Drop-in USPS v3 API** — same endpoints, managed OAuth
+- **Flat monthly pricing** — no per-label fees ([from $29/mo](https://revaddress.com/pricing/))
+- **Rate limit handling** — 120-600 req/min depending on plan
+- **BYOK support** — bring your own USPS credentials
+- **286 tests, 41 routes** — production-grade infrastructure
+
+[Get a free sandbox key](https://revaddress.com/signup/) — address validation, tracking, and rate shopping included. No credit card required.
+
 ## Requirements
 
 - PHP 8.0+
@@ -192,6 +218,18 @@ vendor/bin/phpunit --testdox
 - `ext-openssl` (for HTTPS)
 - USPS Developer Portal account ([developers.usps.com](https://developers.usps.com))
 
+## Links
+
+- [Python SDK](https://github.com/revereveal/usps-v3) — same API, Python edition
+- [Node.js SDK](https://github.com/revereveal/usps-v3-node) — same API, Node.js edition
+- [RevAddress API](https://revaddress.com) — managed USPS API with BYOK support
+- [RevAddress Docs](https://revaddress.com/docs/) — API reference and guides
+- [RevAddress Pricing](https://revaddress.com/pricing/) — flat monthly, no per-label fees
+- [USPS v3 API Docs](https://developer.usps.com/api/81)
+- [Packagist](https://packagist.org/packages/revaddress/usps-v3-php)
+
 ## License
 
 MIT
+
+Built by [RevAddress](https://revaddress.com) — direct USPS API integration for developers.
