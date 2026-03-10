@@ -1,8 +1,10 @@
 # usps-v3-php
 
+[![Tests](https://github.com/revereveal/usps-v3-php/actions/workflows/tests.yml/badge.svg)](https://github.com/revereveal/usps-v3-php/actions/workflows/tests.yml)
+
 PHP client for the USPS v3 REST API. Drop-in replacement for the retired Web Tools XML API.
 
-**Zero dependencies.** PHP 8.0+ with `ext-json` and `ext-openssl`. Works in WooCommerce, Magento, Laravel, Symfony, or standalone.
+**Zero dependencies.** PHP 8.0+ with `ext-json` and `ext-openssl`. Works in WooCommerce, Magento, Laravel, Symfony, or standalone. **59 tests, 102 assertions.**
 
 ## Install
 
@@ -173,6 +175,15 @@ See [revaddress.com/blog/usps-web-tools-shutdown-2026](https://revaddress.com/bl
 - [WooCommerce USPS Migration](https://revaddress.com/blog/woocommerce-usps-migration)
 - [Magento AC-15210 Fix](https://revaddress.com/blog/magento-usps-ac15210-fix)
 - [USPS OAuth Troubleshooting](https://revaddress.com/blog/usps-oauth-troubleshooting)
+
+## Testing
+
+```bash
+composer install
+vendor/bin/phpunit --testdox
+```
+
+59 tests covering: Client validation, TokenManager cache lifecycle, Http multipart parsing, exception hierarchy and retryability. CI runs PHP 8.0–8.4.
 
 ## Requirements
 
