@@ -1,0 +1,54 @@
+{
+    "name": "revaddress/usps-v3-php",
+    "description": "USPS v3 REST API client for PHP — OAuth 2.0, address validation, tracking, rates, labels, Payment Authorization. Drop-in replacement for retired Web Tools.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "usps",
+        "usps-api",
+        "usps-v3",
+        "shipping",
+        "address-validation",
+        "tracking",
+        "labels",
+        "oauth2",
+        "rest-api",
+        "woocommerce",
+        "magento"
+    ],
+    "authors": [
+        {
+            "name": "James Lambert",
+            "email": "james@revasser.nyc",
+            "homepage": "https://revaddress.com"
+        }
+    ],
+    "homepage": "https://revaddress.com",
+    "support": {
+        "docs": "https://revaddress.com/docs",
+        "issues": "https://github.com/revereveal/usps-v3-php/issues",
+        "source": "https://github.com/revereveal/usps-v3-php"
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RevAddress\\USPSv3\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RevAddress\\USPSv3\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
